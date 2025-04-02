@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none; /* リンクの下線を消す */
+    color: inherit; /* 親要素の色を継承 */
+}
+
+ol, ul {
+    list-style: none; /* リストのデフォルトスタイルを消す */
+    padding: 0; /* パディングを消す */
+    margin: 0; /* マージンを消す */
+}
+
+.hero {
+    height: 100vh; /* ビューポート全体の高さ */
+    background-image: url('../images/Keitaro_b:sair.jpg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像を画面全体に拡大縮小 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+    position: relative; /* 他の要素を重ねるための基準 */
+    z-index: 1;
+    animation: zoomEffect 20s infinite; /* アニメーションを適用 */
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1); /* 初期サイズ */
+    }
+    50% {
+        transform: scale(1.1); /* 少しズーム */
+    }
+    100% {
+        transform: scale(1); /* 元に戻る */
+    }
+}
+
+header, footer {
+    position: absolute; /* 背景画像の上に配置 */
+    width: 100%; /* 横幅を画面全体に広げる */
+    z-index: 2; /* 背景より前面に表示 */
+    color: white; /* テキストを白に設定 */
+    text-align: center;
+}
+
+header {
+    top: 0; /* ヘッダーを画面上部に配置 */
+    background: rgba(0, 0, 0, 0.5); /* 背景を半透明にする */
+    padding: 10px 0;
+}
+
+footer {
+    bottom: 0; /* フッターを画面下部に配置 */
+    background: rgba(0, 0, 0, 0.5); /* 背景を半透明にする */
+    padding: 10px 0;
+}
