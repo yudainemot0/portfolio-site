@@ -6,9 +6,14 @@ import cors from 'cors'; // CORSをインポート
 const app = express();
 const PORT = 3000;
 
-// CORSを有効化
+// CORSを有効化Localhostでの開発時に必要な場合
+// app.use(cors({
+//     origin: 'http://127.0.0.1:5500'
+// }));
+
+// CORSを有効化Vercelでのデプロイ時に必要な場合
 app.use(cors({
-    origin: 'http://127.0.0.1:5500' // 許可するオリジンを指定
+    origin: 'https://portfolio-site-blue-one.vercel.app'
 }));
 
 const API_URL = process.env.API_URL;
