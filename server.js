@@ -13,7 +13,7 @@ const PORT = 3000;
 
 // CORSを有効化Vercelでのデプロイ時に必要な場合
 app.use(cors({
-    origin: 'https://portfolio-site-blue-one.vercel.app' // フロントエンドのURLを指定
+    origin: 'https://portfolio-site-blue-one.vercel.app'
 }));
 
 const API_URL = process.env.API_URL;
